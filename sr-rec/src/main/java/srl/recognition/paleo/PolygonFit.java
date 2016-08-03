@@ -79,9 +79,8 @@ public class PolygonFit extends Fit {
 			m_fail = 0;
 		}
 
-		// TODO: remove eventually, this is for COA only
-		// test 2: must have at least 5 lines
-		if (m_polylineFit.getNumSubStrokes() < 5) {
+		// test 2: must have at least 3 lines
+		if (m_polylineFit.getNumSubStrokes() < 3) {
 			m_passed = false;
 			m_fail = 1;
 		}
