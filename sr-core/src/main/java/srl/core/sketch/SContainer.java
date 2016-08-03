@@ -696,14 +696,14 @@ public abstract class SContainer extends SComponent implements
 
 		for (SComponent c : contents) {
 			BoundingBox b = c.getBoundingBox();
-			if (b.getLeft() < minX)
-				minX = b.getLeft();
-			if (b.getRight() > maxX)
-				maxX = b.getRight();
-			if (b.getBottom() < minY)
-				minY = b.getBottom();
-			if (b.getTop() > maxY)
-				maxY = b.getTop();
+			if (b.getMinX() < minX)
+				minX = b.getMinX();
+			if (b.getMaxX() > maxX)
+				maxX = b.getMaxX();
+			if (b.getMinY() < minY)
+				minY = b.getMinY();
+			if (b.getMaxY() > maxY)
+				maxY = b.getMaxY();
 		}
 
 		boundingBox = new BoundingBox(minX, minY, maxX, maxY);
